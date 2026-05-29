@@ -376,6 +376,7 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.video-frame video,
 .video-frame img {
   display: block;
   width: 100%;
