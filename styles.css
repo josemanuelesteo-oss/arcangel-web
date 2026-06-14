@@ -756,25 +756,24 @@ h3 {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.58fr);
   gap: 42px;
   align-items: center;
-  width: min(1180px, calc(100% - 40px));
-  min-height: 88vh;
-  margin: 0 auto;
-  padding: 132px 0 82px;
-}
-
-.how-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 58vh;
-  z-index: -1;
+  width: 100%;
+  min-height: 760px;
+  margin: 0;
+  padding: 132px max(20px, calc((100vw - 1180px) / 2)) 88px;
   background:
-    linear-gradient(135deg, rgba(15, 63, 56, 0.96), rgba(9, 28, 25, 0.92)),
+    linear-gradient(90deg, rgba(7, 24, 21, 0.96) 0%, rgba(9, 38, 34, 0.92) 48%, rgba(9, 38, 34, 0.62) 100%),
     url("assets/park-header.jpg") center / cover no-repeat;
 }
 
 .how-copy {
   color: #fff;
+  max-width: 720px;
+}
+
+.how-copy h1 {
+  max-width: 700px;
+  font-size: clamp(46px, 6vw, 82px);
+  line-height: 0.98;
 }
 
 .how-copy p {
@@ -785,7 +784,14 @@ h3 {
 }
 
 .how-phone {
+  display: flex;
+  justify-content: center;
   min-height: 570px;
+  overflow: visible;
+}
+
+.how-phone .phone-shell {
+  width: min(330px, 78vw);
 }
 
 .how-steps {
@@ -1005,6 +1011,11 @@ h3 {
 
   .how-phone {
     min-height: auto;
+  }
+
+  .how-hero {
+    min-height: auto;
+    padding-top: 118px;
   }
 
   .how-step {
